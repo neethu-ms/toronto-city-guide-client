@@ -6,6 +6,7 @@ import Login from './components/auth/Login';
 import Home from './components/Home';
 import Header from './components/Layout/Header';
 import UserContext from './context/UserContext';
+import UserProfile from './components/UserProfile'
 import Axios from 'axios';
 
 
@@ -28,7 +29,7 @@ function App() {
 
       if (tokenRes.data) {
         console.log('token:', token);
-        const userRes = await Axios.post('http://localhost:5000/user/', null, {headers: {
+        const userRes = await Axios.post('http://localhost:5000/getActiveUser', null, {headers: {
           "x-auth-token": token
         }});
         
@@ -40,18 +41,19 @@ function App() {
     }
 
     checkLoggedIn()
-  }, [])
+  }, [userData.token])
 
   return (
     <div className="App">
       <BrowserRouter>
       <UserContext.Provider value={{userData, setUserData}}>
-      {/* Added temp header to handdle nav to cut down on clutter we can add a proper styled nav */}
+      {/* Added temp header to handle nav to cut down on clutter we can add a proper styled nav */}
       <Header />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
           <Route path='/signup' component={Signup} />
+          <Route path='/userProfile' component={UserProfile} />
         </Switch>
       {/* <header className="App-header">
       </header> */}
