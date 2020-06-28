@@ -4,16 +4,22 @@ import { Card, Button } from '@material-ui/core';
 import UserContext from '../context/UserContext';
 
 
-export default function UserContactInfo(props) {
-    const {contactName, contactId} = props;
+export default function UserContactInfo({contactName, contactId}) {
     const history = useHistory();
     const {userData, setUserData} = useContext(UserContext);
     
     const renderMessages = () => {
-        const contactID = document.querySelector('#contactId');
-        userData.contactId = contactID.value
+        const contactID = contactId
+        setUserData({...userData, contactId: contactID})
         history.push('/messages');
     }
+
+    
+    const handleDelete = e => {
+        e.preventDefault()
+        console.log('yes')
+      }
+    
 
     return (
         <div>
@@ -28,7 +34,12 @@ export default function UserContactInfo(props) {
             >
                 Messages
             </Button>
-            <Button variant="contained">Remove</Button>
+            <Button 
+                variant="contained"
+                onclick={handleDelete}
+            >
+            Remove
+            </Button>
         </Card> 
         </div>
     )
