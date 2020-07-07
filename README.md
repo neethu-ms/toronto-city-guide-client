@@ -7,13 +7,13 @@ An application that allows user to see locations around the city and find accomm
 
 
 ## Dependencies
-- React v16.13.1
-- Material UI v4.10.2
+- React.JS v16.13.1
+- Material-UI v4.10.2
 - Node v14.3.0
 - Express v4.17.1 
 - MongoDB v3.5.8
 - Mongoose v5.9.18
-- Socket.io v 2.3.0\
+- Socket.IO v 2.3.0
 - Axios v0.19.2 
 
 ## Screen Shots
