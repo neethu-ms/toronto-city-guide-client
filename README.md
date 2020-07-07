@@ -19,9 +19,13 @@ An application that allows user to see locations around the city and find accomm
 ## Screen Shots
 
 #### Home Page
-![https://github.com/neethu-ms/toronto-city-guide-client/blob/master/public/home.png?raw=true]()
+![Home page with map that shows favourites info when logged in.](https://github.com/neethu-ms/toronto-city-guide-client/blob/master/public/home.png?raw=true)
+
+#### Map Page
+![The Map page where you can search for locations, and see your favourites.](https://github.com/neethu-ms/toronto-city-guide-client/blob/master/public/map.png?raw=true)
 
 #### Schedule Page
-![The Schedule page where you can add event information and view information for each day]()
+![The Schedule page where you can add event information and view information for each day.](https://github.com/neethu-ms/toronto-city-guide-client/blob/master/public/schedule.png?raw=true)
 
-#### 
+#### Messages Page
+![The Messages page where you can communicate with your contacts in real time.](https://github.com/neethu-ms/toronto-city-guide-client/blob/master/public/messages.png?raw=true)
