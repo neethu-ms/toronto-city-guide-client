@@ -19,7 +19,7 @@ An application that allows user to see locations around the city and find accomm
 ## Screen Shots
 
 #### Home Page
-![Home page with map that shows favourites info when logged in.]()
+![https://github.com/neethu-ms/toronto-city-guide-client/blob/master/public/home.png?raw=true]()
 
 #### Schedule Page
 ![The Schedule page where you can add event information and view information for each day]()
