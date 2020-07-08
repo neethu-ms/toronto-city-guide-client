@@ -30,12 +30,12 @@ const Messages = () => {
 
     useEffect(() => {
 
-        socket = io('https://toronto-city-travel-guide.herokuapp.com');
+        socket = io('https://cors-anywhere.herokuapp.com/https://toronto-city-travel-guide.herokuapp.com');
 
         if (!userData.user) {
             history.push('/')
         } else {
-            axios.post("https://toronto-city-travel-guide.herokuapp.com/getUserMessages", {
+            axios.post("https://cors-anywhere.herokuapp.com/https://toronto-city-travel-guide.herokuapp.com/getUserMessages", {
                 userId: userData.user.id,
                 contactId: userData.contactInfo.contactId
             }, {
@@ -85,7 +85,7 @@ const Messages = () => {
                 setMessages({ ...messages, messageHistory: newHistory })
             }
 
-            axios.post("https://toronto-city-travel-guide.herokuapp.com/updateUserMessages", {
+            axios.post("https://cors-anywhere.herokuapp.com/https://toronto-city-travel-guide.herokuapp.com/updateUserMessages", {
                 newMessage,
                 messagesId: messages._id
                 // messagesId: messages ? messages._id : null
